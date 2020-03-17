@@ -1,5 +1,10 @@
 {
     "require": {
         "illuminate/database": "^7.1"
+    },
+    "autoload": {
+        "files": [
+            "db.php"
+        ]
     }
 }
