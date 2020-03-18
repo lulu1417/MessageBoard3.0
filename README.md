@@ -30,7 +30,7 @@ php create-table.php
 php -S localhost:8000
 ```
 網址列輸入:http://localhost:8000
-或直接輸入: http://35.229.218.102/(不用執行以上步驟)
+或直接輸入: http://35.229.218.102/ (不用執行以上步驟)
 就會進入註冊畫面，註冊成功後會自動導向主畫面
 ![](https://i.imgur.com/ZcIriUA.png)
 
