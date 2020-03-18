@@ -1,6 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-require 'header.php';
 if (isset($_SESSION['name']) && isset($_POST['submit'])) {
     $like = Like::where('user_id', $_SESSION['user_id'])->where('post_id', $_POST['post_id'])->first();
 

@@ -5,7 +5,8 @@
     },
     "autoload": {
         "files": [
-            "db.php"
+            "db.php",
+            "controllers/header.php"
         ],
         "classmap": ["Models"]
     }
