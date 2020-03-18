@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
         if (!$user) {
             $user = User::create([
                 'name' => $_POST['name'],
-                'password' => $_POST['password'],
+                'password' => hash('sha256', $_POST['password']),
                 'created_at' => date("Y-m-d H:i:s"),
             ]);
 
