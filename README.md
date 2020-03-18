@@ -1,7 +1,12 @@
 # Message Board
 一個具有會員系統、發表留言、回覆留言和按讚功能的留言板
 ## Getting Started
-參數設定：
+mysql建立資料庫
+```
+mysql> create database board;
+```
+
+複製env.php內容並修改參數設定：
 ```
 cp env.example.php env.php
 ```
@@ -16,13 +21,16 @@ composer require illuminate/database illuminate/events
 composer dump-autoload
 ```
 
-
 建置資料表：
 ```
 php create-table.php
 ```
-
-網址列輸入：http://localhost:8000
+開啟server：
+```
+php -S localhost:8000
+```
+網址列輸入:http://localhost:8000
+或直接輸入: http://35.229.218.102/(不用執行以上步驟)
 就會進入註冊畫面，註冊成功後會自動導向主畫面
 ![](https://i.imgur.com/ZcIriUA.png)
 
