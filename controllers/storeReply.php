@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 require 'header.php';
-if (isset($_POST['submit'])) {
+if (isset($_SESSION['name']) && isset($_POST['submit'])) {
     $reply = Reply::create([
         'content' => $_POST['content'],
         'comment_id' => $_POST['comment_id'],
@@ -13,4 +13,11 @@ if (isset($_POST['submit'])) {
 <script>
     setTimeout(function(){window.location.href='showReplies';},20);
 </script>";
+}else{
+
+    echo "
+        <script>
+            setTimeout(function(){window.location.href='/';},20);
+        </script>";
+
 }
