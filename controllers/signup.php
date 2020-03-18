@@ -13,25 +13,16 @@ if (isset($_POST['submit'])) {
                 'created_at' => date("Y-m-d H:i:s"),
             ]);
             $_SESSION['user_id'] = $user->id;
-            echo "
-        <script>
-            setTimeout(function(){window.location.href='board';},20);
-        </script>";
+            Redirect::setTimeoutString('board',10);
         } else {
             echo '<div class="warning">The Username has already been used ！</div>';
-            echo "
-        <script>
-            setTimeout(function(){window.location.href='/';},2000);
-        </script>";
+            Redirect::setTimeoutString('/',2000);
+
 
         }
     }else{
-
         echo '<div class="warning">Please enter Username and password ！</div>';
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='/';},2000);
-        </script>";
+        Redirect::setTimeoutString('/',10000);
 
     }
 

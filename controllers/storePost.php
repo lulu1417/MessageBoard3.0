@@ -8,14 +8,10 @@ if (isset($_POST['submit'])) {
             'user_id' => $_SESSION['user_id'],
             'created_at' => date("Y-m-d H:i:s"),
         ]);
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='board';},20);
-        </script>";
+        Redirect::setTimeoutString('board',10);
     }else{
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='addPost';},20);
-        </script>";
+        Redirect::setTimeoutString('addPost', 10);
     }
 }
+
+

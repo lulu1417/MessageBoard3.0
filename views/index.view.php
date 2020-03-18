@@ -13,6 +13,7 @@ require 'style.css';
         <a href='board'>All Posts</a>
         <a href='signin'>Sign in</a>
     </div>
+
     <div class="content">
         <div class="m-b-md">
             <form name="signup" action="signup" method="post">

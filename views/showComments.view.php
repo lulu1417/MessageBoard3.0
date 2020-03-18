@@ -9,6 +9,12 @@ require 'style.css';
         require 'partials/nav.php';
         ?>
     </div>
+    <div class="top-left home">
+        <?php
+        require 'partials/Back.php';
+        Back::setBackString('board');
+        ?>
+    </div>
 
 </div>
 <div class="note full-height">

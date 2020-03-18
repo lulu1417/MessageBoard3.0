@@ -33,6 +33,13 @@
     right: 10px;
     top: 20px;
 }
+
+.top-left {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
 .bottom {
     bottom: 60px;
 }

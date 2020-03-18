@@ -12,16 +12,9 @@ if (isset($_SESSION['name']) && isset($_POST['submit'])) {
     }
 
     $_SESSION['post_id'] = $_POST['post_id'];
-    echo "
-        <script>
-            setTimeout(function(){window.location.href='showLikes';},20);
-        </script>";
+    Redirect::setTimeoutString('showLikes',10);
 }else{
-
-    echo "
-        <script>
-            setTimeout(function(){window.location.href='/';},20);
-        </script>";
+    Redirect::setTimeoutString('/',10);
 
 }
 

@@ -9,21 +9,11 @@ if (isset($_SESSION['name']) && isset($_POST['submit'])) {
             'created_at' => date("Y-m-d H:i:s"),
         ]);
         $_SESSION['comment_id'] = $_POST['comment_id'];
-        echo "
-<script>
-    setTimeout(function(){window.location.href='showReplies';},20);
-</script>";
+        Redirect::setTimeoutString('showReplies',10);
     }else{
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='showComments';},20);
-        </script>";
+        Redirect::setTimeoutString('showComments',10);
     }
 } else {
 
-    echo "
-        <script>
-            setTimeout(function(){window.location.href='/';},20);
-        </script>";
-
+    Redirect::setTimeoutString('/',10);
 }

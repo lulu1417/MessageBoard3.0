@@ -10,6 +10,12 @@ include 'style.css';
         require 'partials/nav.php';
         ?>
     </div>
+    <div class="top-left home">
+        <?php
+        require 'partials/Back.php';
+        Back::setBackString('board');
+        ?>
+    </div>
     <div class="content">
         <div class="m-b-md">
             <form name="form1" action="storePost" method="post">

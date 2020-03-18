@@ -9,25 +9,15 @@ if (isset($_POST['submit'])) {
         if ($user && $user->password == hash('sha256', $_POST['password'])) {
             echo '<div class="success">Welcome ！</div>';
             $user = User::where('name', $_POST['name'])->first();
-            echo "
-        <script>
-            setTimeout(function(){window.location.href='board';},2000);
-        </script>";
+            Redirect::setTimeoutString('board',500);
 
         } else {
             echo '<div class="warning">Wrong Username or password ！</div>';
-            echo "
-        <script>
-            setTimeout(function(){window.location.href='signin';},2000);
-        </script>";
+            Redirect::setTimeoutString('signin',100000);
         }
     }else{
         echo '<div class="warning">Please enter Username and password ！</div>';
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='signin';},2000);
-        </script>";
-
+        Redirect::setTimeoutString('signin',100000);
     }
 
 }

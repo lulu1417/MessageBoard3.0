@@ -10,24 +10,14 @@ if (isset($_SESSION['name']) && isset($_POST['submit']) ) {
             'created_at' => date("Y-m-d H:i:s"),
         ]);
 
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='showComments';},20);
-        </script>";
+        Redirect::setTimeoutString('showComments',10);
 
     }else{
-        echo "
-        <script>
-            setTimeout(function(){window.location.href='board';},20);
-        </script>";
+        Redirect::setTimeoutString('board',10);
 
     }
 
 }else{
-
-    echo "
-        <script>
-            setTimeout(function(){window.location.href='/';},20);
-        </script>";
+    Redirect::setTimeoutString('/',10);
 
 }

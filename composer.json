@@ -6,7 +6,8 @@
     "autoload": {
         "files": [
             "db.php",
-            "controllers/header.php"
+            "controllers/header.php",
+            "controllers/Redirect.php"
         ],
         "classmap": ["Models"]
     }
